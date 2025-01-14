@@ -1,0 +1,46 @@
+{
+  "title": "Rapid Hospitality Management Dashboard",
+  "rules": [
+    {
+      "description": "Optimize React for real-time dashboard updates",
+      "key_points": [
+        "Use functional components with hooks like useState, useEffect, and useContext",
+        "Implement React.memo() to prevent unnecessary renders",
+        "Ensure proper cleanup in useEffect to avoid memory leaks",
+        "Use Zustand for global state management where necessary"
+      ]
+    },
+    {
+      "description": "Supabase Integration",
+      "key_points": [
+        "Ensure secure authentication via Supabase Auth",
+        "Use Supabase's real-time features for reservation update notifications",
+        "Integrate row-level security policies for database access"
+      ]
+    },
+    {
+      "description": "Back-End RESTful API Structure",
+      "key_points": [
+        "Define routes using Express for endpoints like POST /reservations, GET /reservations",
+        "Implement error-handling middleware for robust API management",
+        "Use modular route management and separate concerns appropriately"
+      ]
+    },
+    {
+      "description": "Performance Optimization",
+      "key_points": [
+        "Use serverless functions for on-demand processing",
+        "Optimize API responses and avoid over-fetching",
+        "Ensure lazy loading and dynamic imports for non-critical components"
+      ]
+    },
+    {
+      "description": "UI/UX Best Practices",
+      "key_points": [
+        "Implement responsive design using Tailwind CSS",
+        "Enhance user experience with Shadcn UI for form handling and validations",
+        "Focus on accessibility with ARIA attributes and Semantic HTML"
+      ]
+    }
+  ]
+}

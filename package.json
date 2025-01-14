@@ -1,0 +1,19 @@
+{
+  "name": "rapid-hospitality-dashboard",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "frontend": "npm run dev --workspace=frontend",
+    "backend": "npm run dev --workspace=backend",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "build": "npm run build --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  }
+} 
