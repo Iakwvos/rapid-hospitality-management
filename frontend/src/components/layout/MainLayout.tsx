@@ -59,7 +59,7 @@ export function MainLayout() {
                   <li>Cloud & DevOps</li>
                 </ul>
               </div>
-              <p className="mt-4">Contact: +30 210 88 47 420</p>
+              <p className="mt-4">Contact: +30 698 15 63 865</p>
             </div>
           </div>
         </div>
