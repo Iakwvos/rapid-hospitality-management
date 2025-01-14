@@ -1,0 +1,13 @@
+**/[Oo]bj/
+**/[Bb]in/
+**/[Ll]ogs/
+**/.git/
+**/.vs/
+**/.vscode/
+**/node_modules/
+**/*.user
+**/*.suo
+**/.DS_Store
+frontend/
+.env
+.env.* 
