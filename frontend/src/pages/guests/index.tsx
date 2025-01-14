@@ -44,7 +44,7 @@ export function GuestsPage() {
   useEffect(() => {
     const fetchGuests = async () => {
       try {
-        const response = await fetch('http://localhost:5035/api/guests')
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/guests`)
         if (!response.ok) {
           throw new Error('Failed to fetch guests')
         }

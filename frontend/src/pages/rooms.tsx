@@ -73,7 +73,7 @@ export function RoomsPage() {
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const response = await fetch('http://localhost:5035/api/rooms')
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/rooms`)
         if (!response.ok) {
           throw new Error('Failed to fetch rooms')
         }

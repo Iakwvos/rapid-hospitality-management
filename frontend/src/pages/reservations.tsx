@@ -164,9 +164,9 @@ export function ReservationsPage() {
     const fetchData = async () => {
       try {
         const [guestsResponse, roomsResponse, reservationsResponse] = await Promise.all([
-          fetch('http://localhost:5035/api/guests'),
-          fetch('http://localhost:5035/api/rooms'),
-          fetch('http://localhost:5035/api/reservations')
+          fetch(`${import.meta.env.VITE_API_URL}/api/guests`),
+          fetch(`${import.meta.env.VITE_API_URL}/api/rooms`),
+          fetch(`${import.meta.env.VITE_API_URL}/api/reservations`)
         ])
 
         if (!guestsResponse.ok || !roomsResponse.ok || !reservationsResponse.ok) {
@@ -477,7 +477,7 @@ export function ReservationsPage() {
 
       console.log('Sending reservation data:', formattedData);
 
-      const response = await fetch('http://localhost:5035/api/reservations', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/reservations`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -708,7 +708,7 @@ export function ReservationsPage() {
 
       console.log('Updating reservation with data:', formattedData);
 
-      const response = await fetch(`http://localhost:5035/api/reservations/${selectedReservation.id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/reservations/${selectedReservation.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -4,6 +4,13 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure Kestrel to use the PORT environment variable
+builder.WebHost.ConfigureKestrel(options =>
+{
+    var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+    options.ListenAnyIP(int.Parse(port));
+});
+
 // Add services to the container
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
@@ -35,10 +42,7 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
-        policy.WithOrigins(
-                "http://localhost:5173",  // HTTP
-                "https://localhost:5173"  // HTTPS
-            )
+        policy.WithOrigins("*")
             .AllowAnyMethod()
             .AllowAnyHeader();
     });

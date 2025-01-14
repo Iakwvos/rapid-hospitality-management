@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { MainLayout } from './components/layout/MainLayout'
-import { DashboardPage } from './pages/dashboard'
+import { DashboardPage } from './pages/Dashboard'
 import { RoomsPage } from './pages/rooms'
 import { GuestsPage } from './pages/guests'
 import { ReservationsPage } from './pages/reservations'
