@@ -1,0 +1,9 @@
+[build]
+builder = "nixpacks"
+buildCommand = "cd frontend && npm install && npm run build && cd ../RapidHospitalityManagement.Api && dotnet publish -c Release"
+
+[deploy]
+startCommand = "cd RapidHospitalityManagement.Api && dotnet RapidHospitalityManagement.Api.dll"
+healthcheckPath = "/swagger"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure" 
